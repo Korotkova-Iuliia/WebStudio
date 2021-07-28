@@ -1,11 +1,9 @@
 .section-footer {
-  background: var(--background-hero-footer);
   padding-top: 60px;
   padding-bottom: 60px;
-  display: flex;
+  background: var(--background-hero-footer);
 }
-
-.container.container-footer {
+.container-footer {
   display: flex;
   align-items: baseline;
 }

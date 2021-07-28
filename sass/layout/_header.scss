@@ -1,13 +1,11 @@
 .header {
   border-bottom: 1px solid #ececec;
-
-  &__section {
-    align-items: center;
+  &__container {
     display: flex;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    align-items: center;
     justify-content: space-between;
   }
+
   &__nav {
     display: flex;
     align-items: center;
