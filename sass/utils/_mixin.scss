@@ -89,3 +89,23 @@
   text-align: $t-align;
   color: $color;
 }
+
+@mixin contact(
+  $fs: 14px,
+  $f-st: normal,
+  $fw: 400,
+  $lh: 24px,
+  $l-space: 0.03em,
+  $t-align: left,
+  $color: var(--contact-footer),
+  $trans: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+) {
+  font-size: $fs;
+  font-style: $f-st;
+  font-weight: $fw;
+  line-height: decimal-round($lh/$fs, 2);
+  letter-spacing: $l-space;
+  text-align: $t-align;
+  color: $color;
+  transition: $trans;
+}

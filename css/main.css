@@ -62,6 +62,11 @@ img {
   --card-set-gap: 30px;
 }
 
+.logo, .soc__link, .header__link, .header-contact__link, .portfolio-card__link, .contact, .contact-map {
+  text-decoration: none;
+  color: currentColor;
+}
+
 .title_hidden {
   position: absolute;
   width: 1px;
@@ -930,6 +935,10 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.contact:hover, .contact:focus {
+  color: var(--color-accent);
+}
+
 .contact-map {
   font-size: 14px;
   font-style: normal;
@@ -937,14 +946,12 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-align: left;
-  color: #ffffff;
+  color: var(--contact-footer);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #ffffff;
 }
 
-.contact-map:hover,
-.contact-map:focus,
-.contact:hover,
-.contact:focus {
+.contact-map:hover, .contact-map:focus {
   color: var(--color-accent);
 }
 

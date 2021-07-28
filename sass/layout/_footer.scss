@@ -18,61 +18,50 @@
   margin-bottom: 9px;
 }
 .contact {
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  text-align: left;
-  color: var(--contact-footer);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  @extend %link;
+  @include contact;
 
-.contact-map {
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  text-align: left;
-  color: #ffffff;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+  }
+  &-map {
+    @extend %link;
+    @include contact;
+    color: #ffffff;
 
-.contact-map:hover,
-.contact-map:focus,
-.contact:hover,
-.contact:focus {
-  color: var(--color-accent);
+    &:hover,
+    &:focus {
+      color: var(--color-accent);
+    }
+  }
 }
 
 .subscribe-form {
   margin-left: auto;
-}
+  &__title {
+    display: inline-block;
+    width: 100%;
+    @include title-h3($mt: 0px, $mb: 20px, $color: #ffffff);
+  }
+  &-input {
+    margin-right: 12px;
+    padding-left: 15px;
+    width: 358px;
+    height: 50px;
 
-.subscribe-form__title {
-  display: inline-block;
-  width: 100%;
-  @include title-h3($mt: 0px, $mb: 20px, $color: #ffffff);
-}
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: #ffffff;
 
-.subscribe-form-input {
-  margin-right: 12px;
-  padding-left: 15px;
-  width: 358px;
-  height: 50px;
-
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: #ffffff;
-
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  outline: none;
-}
-.subscribe-form-input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: none;
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
 }
