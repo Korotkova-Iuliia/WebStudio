@@ -1,13 +1,12 @@
 .portfolio-button {
   &__list {
     display: flex;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    justify-content: center;
-    text-align: center;
+    margin-bottom: 56px;
+    flex-wrap: wrap;
   }
 
   &__appearance {
+    margin-bottom: 15px;
     padding: 6px 22px;
     border-radius: 4px;
 
@@ -34,7 +33,14 @@
     }
   }
 
-  &__item:not(:first-child) {
-    margin-left: 8px;
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+  @media screen and (min-width: 768px) {
+    &__list {
+      justify-content: center;
+    }
+  }
+  @media screen and (min-width: 1200px) {
   }
 }
