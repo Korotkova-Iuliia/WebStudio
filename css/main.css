@@ -89,7 +89,7 @@ img {
   --card-set-gap-tablet: 15px;
 }
 
-.logo, .soc__link, .header__link, .header-contact__link, .portfolio-card__link, .section-footer .contact, .section-footer .contact-map {
+.logo, .soc__link, .header__link, .header-contact__link, .portfolio-card__link, .contact, .contact-map {
   text-decoration: none;
   color: currentColor;
 }
@@ -127,8 +127,22 @@ img {
 }
 
 .logo-footer {
-  display: block;
+  text-align: center;
   margin-bottom: 20px;
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .logo-footer .logo {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo-footer {
+    display: block;
+  }
 }
 
 .logo__studio {
@@ -1040,20 +1054,16 @@ img {
 }
 
 .portfolio-card__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * var(--card-set-gap));
-  margin-top: calc(-1 * var(--card-set-gap));
+  margin-bottom: var(---card-set-gap);
 }
 
 .portfolio-card__item {
-  flex-basis: calc((100% - 3 * var(--card-set-gap)) / 3);
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
+  display: flex;
 }
 
 .portfolio-card__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1094,6 +1104,7 @@ img {
 .portfolio-card__description {
   display: block;
   padding: 20px 24px;
+  flex-grow: 1;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
@@ -1117,13 +1128,51 @@ img {
   color: var(--color-txt);
 }
 
+@media screen and (min-width: 768px) {
+  .portfolio-card__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
+  }
+  .portfolio-card__item {
+    flex-basis: calc((100% - 2 * var(--card-set-gap)) / 2);
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-card__item {
+    flex-basis: calc((100% - 3 * var(--card-set-gap)) / 3);
+  }
+}
+
 .section-footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background: var(--background-hero-footer);
 }
 
-.section-footer .contact {
+.adress-footer-box {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.soc__title {
+  margin-top: 0;
+  text-align: center;
+}
+
+.subscribe-form__title {
+  text-align: center;
+}
+
+.subscribe-form-input {
+  margin-bottom: 20px;
+}
+
+.contact {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -1134,11 +1183,11 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section-footer .contact:hover, .section-footer .contact:focus {
+.contact:hover, .contact:focus {
   color: var(--color-accent);
 }
 
-.section-footer .contact-map {
+.contact-map {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -1150,15 +1199,15 @@ img {
   color: #ffffff;
 }
 
-.section-footer .contact-map:hover, .section-footer .contact-map:focus {
+.contact-map:hover, .contact-map:focus {
   color: var(--color-accent);
 }
 
-.section-footer .subscribe-form {
-  margin-left: auto;
+.subscribe-form {
+  margin-top: 60px;
 }
 
-.section-footer .subscribe-form__title {
+.subscribe-form__title {
   display: inline-block;
   width: 100%;
   margin-top: 0px;
@@ -1168,11 +1217,11 @@ img {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  text-align: left;
+  text-align: center;
   color: #ffffff;
 }
 
-.section-footer .subscribe-form-input {
+.subscribe-form-input {
   margin-right: 12px;
   padding-left: 15px;
   width: 100%;
@@ -1188,13 +1237,17 @@ img {
   outline: none;
 }
 
-.section-footer .subscribe-form-input::placeholder {
+.subscribe-form-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .container-footer {
     display: flex;
+  }
+  .subscribe-form {
+    display: block;
+    margin-left: auto;
   }
 }
 
@@ -1211,7 +1264,23 @@ img {
     display: block;
     margin-bottom: 9px;
   }
-  -input {
+  .subscribe-form {
+    margin-left: auto;
+  }
+  .subscribe-form__title {
+    display: inline-block;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: left;
+    color: #ffffff;
+  }
+  .subscribe-form-input {
     width: 358px;
   }
 }

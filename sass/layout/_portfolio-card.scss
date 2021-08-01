@@ -1,19 +1,15 @@
 .portfolio-card {
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: calc(-1 * var(--card-set-gap));
-    margin-top: calc(-1 * var(--card-set-gap));
+    margin-bottom: var(---card-set-gap);
   }
   &__item {
-    flex-basis: calc((100% - 3 * var(--card-set-gap)) / 3);
-    margin-left: var(--card-set-gap);
-    margin-top: var(--card-set-gap);
+    display: flex;
   }
 
   &__link {
     @extend %link;
-    display: block;
+    display: flex;
+    flex-direction: column;
     background: #ffffff;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -57,6 +53,7 @@
   &__description {
     display: block;
     padding: 20px 24px;
+    flex-grow: 1;
     border-right: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
     border-left: 1px solid #eeeeee;
@@ -78,5 +75,24 @@
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--color-txt);
+  }
+
+  @media screen and (min-width: 768px) {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: calc(-1 * var(--card-set-gap));
+      margin-top: calc(-1 * var(--card-set-gap));
+    }
+    &__item {
+      flex-basis: calc((100% - 2 * var(--card-set-gap)) / 2);
+      margin-left: var(--card-set-gap);
+      margin-top: var(--card-set-gap);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__item {
+      flex-basis: calc((100% - 3 * var(--card-set-gap)) / 3);
+    }
   }
 }
