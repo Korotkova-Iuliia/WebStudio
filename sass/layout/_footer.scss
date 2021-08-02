@@ -8,20 +8,20 @@
   text-align: center;
   margin-bottom: 60px;
 }
-// @media screen and (max-width: 767px) {
-.soc {
-  &__title {
-    margin-top: 0;
+@media screen and (max-width: 767px) {
+  .soc {
+    &__title {
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+  .subscribe-form__title {
     text-align: center;
   }
+  .subscribe-form-input {
+    margin-bottom: 20px;
+  }
 }
-.subscribe-form__title {
-  text-align: center;
-}
-.subscribe-form-input {
-  margin-bottom: 20px;
-}
-// }
 .contact {
   @extend %link;
   @include contact;
@@ -70,12 +70,26 @@
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .container-footer {
+  .footer__tablet {
     display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  .adress-footer-box {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .soc {
+    display: inline-block;
   }
   .subscribe-form {
     display: block;
-    margin-left: auto;
+
+    text-align: center;
+    &-input {
+      margin-bottom: 20px;
+      width: 450px;
+    }
   }
 }
 
@@ -84,10 +98,16 @@
     display: flex;
     align-items: baseline;
   }
+  .footer__tablet {
+    display: flex;
+    align-items: baseline;
+  }
 
   .adress-footer-box {
     margin-right: 70px;
     max-width: 231px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .contact-list {
@@ -96,12 +116,15 @@
   }
   .subscribe-form {
     margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
     &__title {
       display: inline-block;
       width: 100%;
       @include title-h3($mt: 0px, $mb: 20px, $color: #ffffff);
     }
     &-input {
+      margin-bottom: 0;
       width: 358px;
     }
   }

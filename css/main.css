@@ -1059,6 +1059,7 @@ img {
 
 .portfolio-card__item {
   display: flex;
+  margin-bottom: 30px;
 }
 
 .portfolio-card__link {
@@ -1159,17 +1160,17 @@ img {
   margin-bottom: 60px;
 }
 
-.soc__title {
-  margin-top: 0;
-  text-align: center;
-}
-
-.subscribe-form__title {
-  text-align: center;
-}
-
-.subscribe-form-input {
-  margin-bottom: 20px;
+@media screen and (max-width: 767px) {
+  .soc__title {
+    margin-top: 0;
+    text-align: center;
+  }
+  .subscribe-form__title {
+    text-align: center;
+  }
+  .subscribe-form-input {
+    margin-bottom: 20px;
+  }
 }
 
 .contact {
@@ -1242,12 +1243,25 @@ img {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .container-footer {
+  .footer__tablet {
     display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  .adress-footer-box {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .soc {
+    display: inline-block;
   }
   .subscribe-form {
     display: block;
-    margin-left: auto;
+    text-align: center;
+  }
+  .subscribe-form-input {
+    margin-bottom: 20px;
+    width: 450px;
   }
 }
 
@@ -1256,9 +1270,15 @@ img {
     display: flex;
     align-items: baseline;
   }
+  .footer__tablet {
+    display: flex;
+    align-items: baseline;
+  }
   .adress-footer-box {
     margin-right: 70px;
     max-width: 231px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .contact-list {
     display: block;
@@ -1266,6 +1286,8 @@ img {
   }
   .subscribe-form {
     margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .subscribe-form__title {
     display: inline-block;
@@ -1281,6 +1303,7 @@ img {
     color: #ffffff;
   }
   .subscribe-form-input {
+    margin-bottom: 0;
     width: 358px;
   }
 }
