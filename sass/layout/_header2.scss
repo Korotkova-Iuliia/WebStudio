@@ -169,11 +169,17 @@
   .header-contact {
     &__list {
       display: flex;
+      align-items: baseline;
     }
     &__item {
       &:not(:last-child) {
         margin-right: 50px;
       }
+    }
+  }
+  .header {
+    &__container {
+      align-items: baseline;
     }
   }
 }

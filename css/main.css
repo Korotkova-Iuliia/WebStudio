@@ -546,6 +546,7 @@ img {
   padding-top: 38px;
   padding-left: 40px;
   padding-bottom: 38px;
+  max-width: 767px;
 }
 
 .mobile-menu .mobile-menu__up {
@@ -966,9 +967,13 @@ img {
 @media screen and (min-width: 1200px) {
   .header-contact__list {
     display: flex;
+    align-items: baseline;
   }
   .header-contact__item:not(:last-child) {
     margin-right: 50px;
+  }
+  .header__container {
+    align-items: baseline;
   }
 }
 
