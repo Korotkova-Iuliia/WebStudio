@@ -5,8 +5,8 @@
   .header-contact__item {
     display: none;
   }
-  .header-contact__list {
-    display: none;
+  .mobile-menu {
+    display: block;
   }
 
   .header__mobile {
@@ -16,7 +16,6 @@
     padding-top: 16px;
     padding-bottom: 16px;
   }
-
   .burger-btn {
     background-color: transparent;
     border: none;
@@ -44,7 +43,7 @@
     display: none;
   }
   .header__mobile {
-    display: none;
+    display: block;
   }
   .header__menu {
     display: block;
@@ -138,7 +137,9 @@
     &__item {
       display: flex;
       align-items: center;
-      // margin-right: 50px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
     }
 
     &__link {
@@ -170,7 +171,9 @@
       display: flex;
     }
     &__item {
-      margin-right: 50px;
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
     }
   }
 }
