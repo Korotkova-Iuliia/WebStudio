@@ -15,9 +15,15 @@
   &__web {
     color: var(--color-accent);
   }
-
-  &-header {
-    margin-right: 93px;
+  @media screen and (min-width: 768px) {
+    &-header {
+      margin-right: 88px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &-header {
+      margin-right: 93px;
+    }
   }
 
   &-footer {
@@ -33,6 +39,9 @@
 
     @media screen and (min-width: 768px) {
       display: block;
+    }
+    @media screen and (min-width: 1200px) {
+      text-align: left;
     }
   }
   &__studio {
