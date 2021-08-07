@@ -45,6 +45,9 @@
     }
   }
   @media screen and (min-width: 1200px) {
+    &__appearance {
+      margin-bottom: 0px;
+    }
     &__list {
       margin-bottom: 50px;
     }

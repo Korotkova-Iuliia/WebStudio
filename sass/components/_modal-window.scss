@@ -1,34 +1,14 @@
-@media screen and (max-width: 1199px) {
-  .backdrop .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffffff;
-    max-width: 450px;
-    height: 609px;
-    border-radius: 4px;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      box-shadow 0px 1px 3px rgba(0, 0, 0, 0.12),
-      0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  }
+.backdrop .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-@media screen and (min-width: 1200px) {
-  .backdrop .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffffff;
-    max-width: 528px;
-    height: 581px;
-    border-radius: 4px;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      box-shadow 0px 1px 3px rgba(0, 0, 0, 0.12),
-      0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  }
-}
-
 .close-button {
   position: absolute;
   right: 8px;
@@ -43,15 +23,28 @@
   padding: 0;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  &-svg {
-    width: 11px;
-    height: 11px;
+&-svg {
+  width: 11px;
+  height: 11px;
+}
+
+&:hover,
+&:focus &-svg {
+  border-color: var(--color-accent);
+  fill: var(--color-accent);
+}
+@media screen and (max-width: 1199px) {
+  .backdrop .modal {
+    max-width: 450px;
+    height: 609px;
   }
+}
 
-  &:hover,
-  &:focus &-svg {
-    border-color: var(--color-accent);
-    fill: var(--color-accent);
+@media screen and (min-width: 1200px) {
+  .backdrop .modal {
+    max-width: 528px;
+    height: 581px;
   }
 }
