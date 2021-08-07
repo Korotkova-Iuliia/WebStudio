@@ -89,6 +89,7 @@
       flex-basis: calc((100% - 2 * var(--card-set-gap)) / 2);
       margin-left: var(--card-set-gap);
       margin-top: var(--card-set-gap);
+      margin-bottom: 0;
     }
   }
   @media screen and (min-width: 1200px) {

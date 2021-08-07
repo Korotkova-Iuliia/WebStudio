@@ -1,7 +1,7 @@
 .portfolio-button {
   &__list {
     display: flex;
-    margin-bottom: 56px;
+    margin-bottom: 40px;
     flex-wrap: wrap;
   }
 
@@ -38,9 +38,15 @@
   }
   @media screen and (min-width: 768px) {
     &__list {
+      margin-bottom: 30px;
+    }
+    &__list {
       justify-content: center;
     }
   }
   @media screen and (min-width: 1200px) {
+    &__list {
+      margin-bottom: 50px;
+    }
   }
 }

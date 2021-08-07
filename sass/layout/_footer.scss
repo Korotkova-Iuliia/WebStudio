@@ -8,6 +8,7 @@
   text-align: center;
   margin-bottom: 60px;
 }
+
 @media screen and (max-width: 767px) {
   .soc {
     &__title {
@@ -39,6 +40,9 @@
     &:focus {
       color: var(--color-accent);
     }
+  }
+  &-list {
+    margin-bottom: 8px;
   }
 }
 .subscribe-form {
@@ -81,7 +85,12 @@
   }
   .soc {
     display: inline-block;
+    &__title {
+      margin-top: 0;
+      text-align: center;
+    }
   }
+
   .subscribe-form {
     display: block;
 
