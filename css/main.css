@@ -1627,7 +1627,18 @@ img {
     flex-basis: calc((100% - 3 * var(--card-set-gap)) / 3);
   }
 }
-
+.container-map {
+  margin: 20px 70px;
+}
+.contact__map-link {
+  display: block;
+  font-size: 20px;
+}
+.contact__map-iframe {
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+}
 
 .section-footer {
   padding-top: 60px;
