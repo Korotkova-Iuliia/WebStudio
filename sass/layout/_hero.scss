@@ -19,7 +19,6 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #ffffff;
-    font-size: 56px;
     line-height: 1.62;
   }
 
@@ -31,6 +30,10 @@
       ),
       url('../img/hero/bg-hero-tablet.jpg');
     @include retina(2, 192dpi, '../img/hero/bg-hero-tablet@2x.jpg', 768px);
+    &__title {
+      font-size: 44px;
+      line-height: 1.55;
+    }
   }
 
   @media screen and (min-width: 1200px) {
@@ -38,7 +41,7 @@
     max-width: 1600px;
 
     &__title {
-      font-size: 44px;
+      font-size: 56px;
       line-height: 1.55;
     }
 
